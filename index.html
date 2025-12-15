@@ -97,6 +97,15 @@
             filter:blur(1px);
         }
 
+<script>
+let isPaidUser = false; // backend se true/false aayega
+
+if(isPaidUser){
+  document.getElementById("jobSection").classList.remove("locked");
+}
+</script>
+
+        
         .subscribe-box{
             margin-top:30px;
             padding:25px;
