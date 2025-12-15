@@ -1,0 +1,77 @@
+<!DOCTYPE<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assam Job Network - Find Your Dream Job</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Assam Job Network</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#jobs">Jobs</a></li>
+                    <li><a href="#gov-jobs">Govt. Jobs</a></li>
+                    <li><a href="#private-jobs">Pvt. Jobs</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#About">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero" class="search-section">
+        <div class="container">
+            <h2>Search Latest Jobs in Assam</h2>
+            <form action="/search" method="get" class="job-search-form">
+                <input type="text" name="keyword" placeholder="Job Title, Keyword, or Company..." required>
+                <select name="location">
+                    <option value="">Select Location</option>
+                    <option value="Guwahati">Guwahati</option>
+                    <option value="Jorhat">Jorhat</option>
+                    <option value="Dibrugarh">Dibrugarh</option>
+                    <option value="Silchar">Silchar</option>
+                    <option value="Tezpur">Tezpur</option>
+                    </select>
+                <button type="submit">Search Job</button>
+            </form>
+            <p>We connect you to the best opportunities across the state.</p>
+        </div>
+    </section>
+
+    <section id="jobs" class="job-listings">
+        <div class="container">
+            <h3>&#9889; Recent Job Postings</h3>
+
+            <div class="job-card">
+                <h4>Assistant Professor - Computer Science</h4>
+                <p class="company">Tezpur University</p>
+                <p class="details">Location: Tezpur | Type: Government</p>
+                <a href="/job/details/1" class="apply-btn">View Details</a>
+            </div>
+
+           <div class="view-all">
+                <a href="/all-jobs" class="main-btn">View All Jobs &#8594;</a>
+            </div>
+
+        </div>
+    </section>
+    
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">About Us</a> | 
+                <a href="#">Terms of Service</a> |
+                <a href="#">Privacy Policy</a>
+            </div>
+            <p>&copy; 2025 Assam Job Network. All rights reserved.</p>
+            <p>Connect with us on Social Media!</p>
+        </div>
+    </footer>
+
+</body>
+</html>
