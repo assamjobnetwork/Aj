@@ -143,6 +143,42 @@
         <p>Salary: ₹14,000 – ₹60,500</p>
     </div>
 
+    <!-- Job Section (Hidden by default) -->
+<div class="job-box" id="jobSection">
+    <h3>Assam Govt Job 2025</h3>
+    <p>Post: Junior Assistant</p>
+    <p>Salary: ₹25,000</p>
+</div>
+
+<!-- Subscribe Message -->
+<div class="subscribe-box" id="subscribeSection">
+    <h3>🔒 Jobs Locked</h3>
+    <p>Jobs dekhne ke liye ₹49 subscription lena hoga</p>
+    <button onclick="unlockJobs()">Subscribe Now</button>
+</div>
+
+<script>
+// Change this value after payment success
+let isPaidUser = false;
+
+function checkUser(){
+    if(isPaidUser){
+        document.getElementById("jobSection").style.display="block";
+        document.getElementById("subscribeSection").style.display="none";
+    }
+}
+
+function unlockJobs(){
+    // Payment ke baad ye true hoga
+    isPaidUser = true;
+    checkUser();
+}
+
+checkUser();
+</script>
+
+</body>
+
 <section>
     <div class="section-title">
         <h2>Why Choose Us?</h2>
