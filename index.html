@@ -1,89 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Assam Job Network - Subscription</title>
-
-<style>
-body{
-    font-family: Arial, sans-serif;
-    background:#f4f6fb;
-    padding:20px;
-}
-
-.card{
-    max-width:400px;
-    margin:auto;
-    background:#fff;
-    padding:25px;
-    border-radius:10px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
-    text-align:center;
-}
-
-button{
-    padding:12px 25px;
-    background:#007bff;
-    color:white;
-    border:none;
-    border-radius:6px;
-    font-size:16px;
-    cursor:pointer;
-}
-
-#qrBox{
-    display:none;
-    margin-top:20px;
-}
-
-#qrBox img{
-    width:250px;
-}
-
-.note{
-    font-size:14px;
-    color:#555;
-}
-</style>
-</head>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assam Job Network - Find Your Dream Job</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    
+    </head>
 <body>
 
-    
-<div class="card">
-    <h2>Unlock Jobs @ ₹49</h2>
-    <p>Subscribe to view all Assam Jobs</p>
+    <header class="main-header">
+        <div class="logo">Assam **Job Network**</div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#jobs">Jobs</a></li>
+                <li><a href="#companies">Companies</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <button class="btn btn-login">Login</button>
+            <button class="btn btn-post">Post Job (Free)</button>
+        </div>
+    </header>
 
-    <!-- Subscribe Button -->
-    <button onclick="showQR()">Subscribe Now</button>
+    <section class="hero-section">
+        <h1>Find Your Next Opportunity in **Assam**</h1>
+        <p>Your local network for free, professional job listings. No subscription fees, ever.</p>
+        <form class="search-form">
+            <input type="text" placeholder="Job Title, Keyword, or Company">
+            <select>
+                <option value="">All Locations</option>
+                <option value="guwahati">Guwahati</option>
+                <option value="dibrugarh">Dibrugarh</option>
+                <option value="silchar">Silchar</option>
+            </select>
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+    </section>
 
-    <!-- QR Code Section -->
-    <div id="qrBox">
-        <h3>Scan & Pay</h3>
-        <!-- OPTION 1: QR Image -->
-        <!-- <img src="qr.png"> -->
+    <section class="value-prop-section">
+        <div class="prop-card no-fee">
+            <h2>💰 **No Subscription Fee**</h2>
+            <p>Access all job listings and apply directly. We believe in free access to opportunities.</p>
+        </div>
+        <div class="prop-card premium-detail">
+            <h2>✨ **Premium Job Details**</h2>
+            <p>High-quality, verified listings with all the essential information you need to apply confidently.</p>
+        </div>
+    </section>
 
-        <!-- OPTION 2: Dynamic UPI QR -->
-        <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=upi://pay?pa=ajay73d@okicici&pn=AssamJobNetwork&am=49&cu=INR">
+    <main class="job-listings-container" id="jobs">
+        <h2 class="section-title">✨ **Featured Opportunities**</h2>
 
-        <p class="note">Payment ke baad admin verify karega</p>
-    </div>
-</div>
+        <article class="job-card premium">
+            <div class="job-header">
+                <div class="company-logo">
+                    <img src="logo-placeholder.png" alt="Company Logo">
+                </div>
+                <div class="job-title-info">
+                    <h3>Senior Software Developer</h3>
+                    <p class="company-name">Tech Solutions Assam Pvt. Ltd.</p>
+                </div>
+                <span class="job-type full-time">Full-Time</span>
+            </div>
+            <div class="job-details">
+                <p>📍 **Guwahati, Assam**</p>
+                <p>💸 **₹8L - ₹12L PA**</p>
+                <p>⏳ **Deadline:** 30th Dec 2025</p>
+                <ul class="skills-list">
+                    <li>Python</li>
+                    <li>Django</li>
+                    <li>AWS</li>
+                </ul>
+            </div>
+            <div class="job-actions">
+                <a href="job-detail-1.html" class="btn btn-view-details">View Details</a>
+                <button class="btn btn-save">Save</button>
+            </div>
+        </article>
 
-    <!-- Job Add -->
-    <div class="job-card">
-    <h3>Assam Govt Job 2025</h3>
-    <p><b>Post:</b> Junior Assistant</p>
-    <p><b>Qualification:</b> Graduate</p>
-    <p><b>Last Date:</b> 25 Jan 2025</p>
-    <a href="#">Apply Now</a>
-</div>
+        <article class="job-card">
+            <div class="job-header">
+                <div class="company-logo">...</div>
+                <div class="job-title-info">
+                    <h3>Marketing Executive</h3>
+                    <p class="company-name">Assam FMCG Group</p>
+                </div>
+                <span class="job-type contract">Contract</span>
+            </div>
+            <div class="job-details">
+                <p>📍 **Dibrugarh, Assam**</p>
+                <p>💸 **Competitive**</p>
+                </div>
+            <div class="job-actions">
+                <a href="job-detail-2.html" class="btn btn-view-details">View Details</a>
+                <button class="btn btn-save">Save</button>
+            </div>
+        </article>
+        
+        <div class="all-jobs-link">
+            <a href="all-jobs.html" class="btn btn-secondary">Browse All 500+ Jobs</a>
+        </div>
+    </main>
 
-<script>
-function showQR(){
-    document.getElementById("qrBox").style.display = "block";
-}
-</script>
+    <footer class="main-footer">
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+            <a href="#">Employer Services</a>
+        </div>
+        <p>&copy; 2025 Assam Job Network. All rights reserved. | Built for the people of Assam.</p>
+    </footer>
 
 </body>
 </html>
