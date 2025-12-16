@@ -2,78 +2,77 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Assam Job Network</title>
+<title>Assam Job Network - Subscription</title>
 
 <style>
 body{
     font-family: Arial, sans-serif;
-    background:#f5f7fa;
+    background:#f4f6fb;
     padding:20px;
 }
 
-.job-box{
-    display:none;
+.card{
+    max-width:400px;
+    margin:auto;
     background:#fff;
-    padding:20px;
-    border-radius:8px;
-    box-shadow:0 0 10px rgba(0,0,0,0.1);
-}
-
-.subscribe-box{
-    background:#fff3cd;
-    padding:20px;
-    border-radius:8px;
-    border:1px solid #ffeeba;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    text-align:center;
 }
 
 button{
-    padding:10px 20px;
+    padding:12px 25px;
     background:#007bff;
-    color:#fff;
+    color:white;
     border:none;
-    border-radius:5px;
+    border-radius:6px;
+    font-size:16px;
     cursor:pointer;
+}
+
+#qrBox{
+    display:none;
+    margin-top:20px;
+}
+
+#qrBox img{
+    width:250px;
+}
+
+.note{
+    font-size:14px;
+    color:#555;
 }
 </style>
 </head>
 
 <body>
 
-<h2>Latest Assam Jobs</h2>
+<div class="card">
+    <h2>Unlock Jobs @ ₹49</h2>
+    <p>Subscribe to view all Assam Jobs</p>
 
-<!-- Job Section (Hidden by default) -->
-<div class="job-box" id="jobSection">
-    <h3>Assam Govt Job 2025</h3>
-    <p>Post: Junior Assistant</p>
-    <p>Salary: ₹25,000</p>
-</div>
+    <!-- Subscribe Button -->
+    <button onclick="showQR()">Subscribe Now</button>
 
-    
-<!-- Subscribe Message -->
-<div class="subscribe-box" id="subscribeSection">
-    <h3>🔒 Jobs Locked</h3>
-    <p>Jobs dekhne ke liye ₹49 subscription lena hoga</p>
-    <button onclick="unlockJobs()">Subscription Now</button>
+    <!-- QR Code Section -->
+    <div id="qrBox">
+        <h3>Scan & Pay</h3>
+        <!-- OPTION 1: QR Image -->
+        <!-- <img src="qr.png"> -->
+
+        <!-- OPTION 2: Dynamic UPI QR -->
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=upi://pay?pa=yourupi@bank&pn=AssamJobNetwork&am=49&cu=INR">
+
+        <p class="note">Payment ke baad admin verify karega</p>
+    </div>
 </div>
 
 <script>
-// Change this value after payment success
-let isPaidUser = false;
-
-function checkUser(){
-    if(isPaidUser){
-        document.getElementById("jobSection").style.display="block";
-        document.getElementById("subscribeSection").style.display="none";
-    }
+function showQR(){
+    document.getElementById("qrBox").style.display = "block";
 }
-
-function unlockJobs(){
-    // Payment ke baad ye true hoga
-    isPaidUser = true;
-    checkUser();
-}
-
-checkUser();
 </script>
 
 </body>
