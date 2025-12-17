@@ -35,28 +35,6 @@
   </style>
 </head>
 <body>
-
-  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-<button id="payBtn">Pay ₹49</button>
-
-<script>
-var options = {
- "key": "RAZORPAY_KEY_ID",
- "amount": 4900,
- "currency": "INR",
- "name": "Assam Job Alert",
- "handler": function () {
-   window.location.href="payment-success.php";
- }
-};
-var rzp = new Razorpay(options);
-document.getElementById('payBtn').onclick=function(e){
- rzp.open(); e.preventDefault();
-}
-</script>
-
-
-
   
 <header>
   <div class="top-bar">
@@ -108,5 +86,6 @@ document.getElementById('payBtn').onclick=function(e){
 
 </body>
 </html>
+
 
 
