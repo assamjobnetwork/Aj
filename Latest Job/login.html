@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login | Northeast Career Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Login</h1>
+
+<div class="box">
+    <input type="text" id="username" placeholder="Username"><br>
+    <input type="password" id="password" placeholder="Password"><br>
+
+    <button onclick="login()">Login</button>
+</div>
+
+<script>
+function login(){
+    let u = document.getElementById("username").value;
+    let p = document.getElementById("password").value;
+
+    // Demo Login
+    if(u === "user123" && p === "pass123"){
+        window.location.href = "jobs.html";
+    } else {
+        alert("Invalid Username or Password");
+    }
+}
+</script>
+
+</body>
+</html>
