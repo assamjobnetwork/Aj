@@ -48,8 +48,39 @@
   
 
   <!-- Dashboard -->
+<h2>Add New Job</h2>
+
+<input id="title" placeholder="Job Title"><br><br>
+<input id="dept" placeholder="Department"><br><br>
+<input id="last" placeholder="Last Date"><br><br>
+<input id="link" placeholder="Apply Link"><br><br>
+
+<button onclick="addJob()">Add Job</button>
+
+<script>
+  // Admin protection
+  if(localStorage.getItem("ajn_logged")!=="yes"){
+    location.href="login.html";
+  }
+
+  function addJob(){
+    let jobs = JSON.parse(localStorage.getItem("jobs")) || [];
+
+    jobs.push({
+      title: title.value,
+      dept: dept.value,
+      last: last.value,
+      link: link.value
+    });
+
+    localStorage.setItem("jobs", JSON.stringify(jobs));
+    alert("Job Added Successfully");
+  }
+</script>
+
+  
   <div class="card dashboard" id="dashboard">
-    <h2>Welcome to Assam Job Network</h2>
+    <h2>Welcome to Northeast Career Hub</h2>
     <p id="userName"></p>
     <p>Latest Assam Govt & Private Jobs will be shown here.</p>
     <button class="logout" onclick="logout()">Logout</button>
@@ -126,6 +157,7 @@ jobs.forEach(job=>{
 
   
 </html>
+
 
 
 
