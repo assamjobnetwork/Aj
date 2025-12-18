@@ -20,6 +20,11 @@
   </style>
 </head>
 <body>
+<script>
+  if (localStorage.getItem("ajn_logged") !== "yes") {
+    window.location.href = "login.html";
+  }
+</script>
 
   <!-- Signup -->
   <div class="card" id="signupBox">
@@ -38,7 +43,9 @@
     <input type="password" id="liPassword" placeholder="Password" required />
     <button onclick="login()">Login</button>
     <div class="link" onclick="showSignup()">New user? Create account</div>
+    localStorage.setItem("ajn_logged", "yes");
   </div>
+  
 
   <!-- Dashboard -->
   <div class="card dashboard" id="dashboard">
@@ -119,5 +126,6 @@ jobs.forEach(job=>{
 
   
 </html>
+
 
 
