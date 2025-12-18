@@ -48,6 +48,24 @@
     <button class="logout" onclick="logout()">Logout</button>
   </div>
 
+  <div id="jobList"></div>
+
+<script>
+let jobs = JSON.parse(localStorage.getItem('jobs')) || [];
+
+jobs.forEach(job=>{
+  document.getElementById('jobList').innerHTML += `
+    <div>
+      <h3>${job.title}</h3>
+      <p>${job.dept}</p>
+      <p>Last Date: ${job.last}</p>
+      <a href="${job.link}" target="_blank">Apply</a>
+    </div>
+  `;
+});
+</script>
+
+
 <script>
   const signupBox=document.getElementById('signupBox');
   const loginBox=document.getElementById('loginBox');
@@ -96,25 +114,10 @@
   }
 </script>
 </body>
-<div id="jobList"></div>
-
-<script>
-let jobs = JSON.parse(localStorage.getItem('jobs')) || [];
-
-jobs.forEach(job=>{
-  document.getElementById('jobList').innerHTML += `
-    <div>
-      <h3>${job.title}</h3>
-      <p>${job.dept}</p>
-      <p>Last Date: ${job.last}</p>
-      <a href="${job.link}" target="_blank">Apply</a>
-    </div>
-  `;
-});
-</script>
 
 
 
   
 </html>
+
 
